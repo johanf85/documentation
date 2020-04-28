@@ -32,7 +32,7 @@ By default, the UART transmit and receive pins are on GPIO 14 and GPIO 15 respec
 
 ## UARTs and Device Tree
 
-Various UART Device Tree Overlay definitions can be found in the kernel github tree. The two most useful overlays are [`disable-bt`](https://github.com/raspberrypi/linux/blob/rpi-4.11.y/arch/arm/boot/dts/overlays/disable-bt-overlay.dts) and [`miniuart-bt`](https://github.com/raspberrypi/linux/blob/rpi-4.11.y/arch/arm/boot/dts/overlays/miniuart-bt-overlay.dts).
+Various UART Device Tree Overlay definitions can be found in the kernel github tree. The two most useful overlays are `disable-bt` and `miniuart-bt`.
 
 `disable-bt` disables the Bluetooth device and restores UART0/ttyAMA0 to GPIOs 14 and 15. It is also necessary to disable the system service that initialises the modem so it doesn't use the UART: `sudo systemctl disable hciuart`.
 
